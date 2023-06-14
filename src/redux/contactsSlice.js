@@ -7,14 +7,6 @@ const initialState = {
   error: null,
 };
 
-const handleFetchContactsSuccess = (state, action) => {
-  return {
-    ...state,
-    items: action.payload,
-    isLoading: false,
-    error: null,
-  };
-};
 const handlePending = state => {
   return {
     ...state,
@@ -28,6 +20,16 @@ const handleRejected = (state, action) => {
     error: action.payload,
   };
 };
+
+const handleFetchContactsSuccess = (state, action) => {
+  return {
+    ...state,
+    items: action.payload,
+    isLoading: false,
+    error: null,
+  };
+};
+
 const handleAddContactSuccess = (state, action) => {
   return {
     ...state,
